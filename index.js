@@ -1,30 +1,93 @@
 const employee = {
-    name: "Marlene",
-    streetAddress: "3 London Ave",
-  };
+  name :" Scott",
+  street : "London ave"
+};
+
+function updateEmployeeWithKeyAndValue(employee,key,value){
+  return Object.assign({}, employee, {[key]: value});
+
+}
+
+function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
+  employee[key] = value;
+  return employee;
+
+};
+
+function deleteFromEmployeeByKey(employee,key){
+  const newObj = { ...employee }
+  //const newObj = Object.assign({}, employee);
+
+  delete newObj[key];
   
-  function updateEmployeeWithKeyAndValue(employee, key, value) {
-    return Object.assign({}, employee, { [key]: value });
-  }
+  return newObj;
+
+}
+
+
+
+function destructivelyDeleteFromEmployeeByKey(employee, key){
+  delete employee[key];
   
-  function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
-    employee[key] = value;
+  return employee;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//const employee = {
+   // name: "Marlene",
+   // streetAddress: "3 London Ave",
+ // };
   
-    return employee;
-  }
+  //function updateEmployeeWithKeyAndValue(employee, key, value) {
+  //  return Object.assign({}, employee, { [key]: value });
+  //}
   
-  function deleteFromEmployeeByKey(employee, key) {
-    // Alternate using ES6 Spread operators:
+ // function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
+  //  employee[key] = value;
+  
+   // return employee;
+  //}
+  
+  //function deleteFromEmployeeByKey(employee, key) {
     // const newObj = { ...employee }
-    const newObj = Object.assign({}, employee);
+   // const newObj = Object.assign({}, employee);
   
-    delete newObj[key];
+   // delete newObj[key];
   
-    return newObj;
-  }
+   // return newObj;
+  //}
   
-  function destructivelyDeleteFromEmployeeByKey(employee, key) {
-    delete employee[key];
+  //function destructivelyDeleteFromEmployeeByKey(employee, key) {
+   // delete employee[key];
   
-    return employee;
-  }
+    //return employee;
+  //}
